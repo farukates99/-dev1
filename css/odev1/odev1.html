@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    a{
+        padding-left: 10px;
+    }
+    li{
+        list-style-position: inside;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    button{
+    border: none;
+    padding: 0;
+    background-color: white;
+     }
+   h3{
+    color: coral;
+    text-align: center;
+   }
+   p{
+    text-align: left;
+   }
+   img{
+        width: 100px;
+        height: 100px;
+    }
+    ol{
+       padding: 0;
+       margin: 0; 
+    }
+    div{
+        text-align: center;
+    }
+    h2{
+        color:  rgb(97, 107, 7);  
+    }
+</style>
+<body>
+    <h1 style="color: darkred;">Kitap Dükkanım</h1>
+    <button onclick="getanasayfa()">
+    <a>Ana Sayfa</a>
+    </button>
+    <button onclick="getkitaplarımız()">
+        <a>Kitaplarımız</a>
+    </button>
+    <button onclick="gethakkımızda()">
+        <a>Hakkımızda</a>
+    </button>
+    <div style=" height: 100%; width: 100%; border: 10px solid sred;">
+    <div id="Anasayfa" >    
+    <h2>Ana Sayfa</h2>
+    <p>Sitemize hoşgeldiniz! İçinde kaybolacağınız evrenlerde, bir bütün olacağınız karekterlerle, sanki içindeymiş hissi veren kitaplar satıyoruz, her birine bir şans vermenizi şiddetle tavsiye ediyoruz.</p>
+    <h3>Kitap Listemiz</h3>
+    <ul>
+        <li>Harry Potter</li>
+        <li>Darren Shan</li>
+        <li>Gregor Yeraltı Günlükleri</li>
+        <li>Dune</li>
+    </ul>
+    </div>
+    <div id="Kitaplarımız" style="display: none;" >
+        <h2>Kitaplarımız</h2>
+        <ol>
+        <img src="harry.jpg"><br>
+            <li>Harry Potter <b>2000TL</b></li>
+        <img src="darren.jpg"><br>    
+            <li>Darren Shan <b>1500TL</b></li>
+        <img src="gregor.jpg"><br>  
+            <li>Gregor Yeraltı Günlükleri <b>1000TL</b></li>
+        <img src="dune.jpg"><br>
+            <li>Dune <b>1200TL</b></li>
+        </ol>
+    </div>
+    <div id="Hakkımızda"  style="display: none;">   
+        <h2>Hakkımızda</h2>
+        <p>Bu çalışma 2 kardeşin 4 gün önce başlmasıyla oluşmuştur. Devamı gelicektir. Şimdi güçsüz gözüktüğümüze bakmayın çok kısa sürede diğer yazılımcılarla rekabet edicek seviyeye geliceğiz inşallah. Görüceksiniz</p>
+        <h3>Vizyonumuz</h3>
+        <p>Dünyada ki en iyi frontend' ci olmak. Uzun olması için Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, amet? Fuga repudiandae dolor ratione assumenda soluta sequi nobis dolore voluptatem. In officia exercitationem quam! Laboriosam distinctio necessitatibus aperiam sapiente saepe?</p>
+        <h3>Misyonumuz</h3>
+        <p>Ne demek olduğunu bilmiyorum.Uzun olması için Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ipsa rem veritatis quisquam tempore qui praesentium placeat accusantium dolores, consequatur iusto ex velit officia animi harum aliquid eligendi rerum! Qui.</p>
+    </div>
+    </div>
+<script>
+      function getanasayfa(){
+        
+        document.getElementById("Hakkımızda").style.display="none";
+        document.getElementById("Anasayfa").style.display="block";
+        document.getElementById("Kitaplarımız").style.display="none";
+    }
+    function gethakkımızda(){
+
+        document.getElementById("Anasayfa").style.display="none";
+        document.getElementById("Hakkımızda").style.display="block";
+        document.getElementById("Kitaplarımız").style.display="none";
+    }
+    function getkitaplarımız(){
+        document.getElementById("Anasayfa").style.display="none";
+        document.getElementById("Kitaplarımız").style.display="block";
+        document.getElementById("Hakkımızda").style.display="none";
+    }
+</script>
+
+</body>
+</html>
